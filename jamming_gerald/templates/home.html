@@ -1,1 +1,107 @@
-this is the homepage!
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'my_css/the_css.css' %}">
+  <title>Document</title>
+  <!-- Insert to your webpage before the </head> -->
+  <script src="{% static 'audioplayerengine/jquery.js' %}"></script>
+  <script src="{% static 'audioplayerengine/amazingaudioplayer.js' %}"></script>
+  <link rel="stylesheet" type="text/css" href="{% static 'audioplayerengine/initaudioplayer-1.css' %}">
+  <script src="{% static 'audioplayerengine/initaudioplayer-1.js' %}"></script>
+  <!-- End of head section HTML codes -->
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <img src="{% static 'images/boom-box (1).png' %}" width="64px" alt="">
+      <a class="navbar-brand" href="#"><h2>Jamming Gerald</h2><div>Dj Services for you!</div></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav-ul">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+         
+        </ul>
+        <button type="button" class="btn btn-outline-secondary my-btn">Book Now!</button>
+      </div>
+    </div>
+  </nav>
+  <div class="my-container clearfix">
+    <div class="container-info">
+      <img src="{% static 'images/portrait.jpg' %}" width="250px" height="250px" alt="">
+      <h1>Keep On Dancing</h1>
+      <h4>let's get in touch!</h4>
+      <button type="button" class="my-btn btn btn-outline-secondary">Free consultation</button>
+    </div>
+  </div>
+
+  <section class="party-sect clearfix">
+    <article class="partys" >
+    <img src="{% static 'images/wedding_pic.jpg' %}" width="50%" alt="">
+    <h3>Weddings & Partys!
+      <br/>
+      <button type="button" class="btn btn-outline-secondary">Learn More</button>
+    </h3>
+    </article>
+  <article class="partys" >
+    <h3>Proms & Dances!
+      <br/>
+      <button type="button" class="btn btn-outline-secondary">Learn More</button>
+    </h3>
+    <img src="{% static 'images/prom_pic.jpg' %}" width="50%" alt="">
+  </article>
+  <article class="partys">
+    <img src="{% static 'images/corp-event.jpg' %}" width="50%" alt="">
+    <h3>Bisness events!
+      <br/>
+      <button type="button" class="btn btn-outline-secondary">Learn More</button>
+    </h3>
+  </article>
+</section>
+ 
+
+ <!-- Insert to your webpage where you want to display the audio player -->
+ 
+ <div id="amazingaudioplayer-1" style="display:block;position:relative; width:100%; height:auto; margin:0px auto 0px;">
+  <h2 class="music-player-title">Check Out The Tunes!</h2>
+  <ul class="amazingaudioplayer-audios" style="display:none;">
+     
+      {% for song in songs.all %}
+      <li data-artist="{{song.song_artist}}" data-title="{{song.song_name}}" data-album="Uppbeat" data-info=""   data-image="{% static 'audios/tenor.gif' %}" data-duration="{{song.get_audio}}">
+        <div class="amazingaudioplayer-source" data-src="{{song.path}}" data-type="audio/mpeg" ></div>
+    </li>
+    {% endfor %}
+  </ul>
+  
+  <div class="amazingaudioplayer-engine"><a href="http://amazingaudioplayer.com" title="jquery audio player">music player for website</a></div>
+</div>
+
+<!-- End of body section HTML codes -->
+  <!--bootstrap javascript-->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+  <!-- Audio Player JS -->
+
+</body>
+</html>
