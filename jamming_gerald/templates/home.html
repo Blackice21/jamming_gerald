@@ -25,34 +25,16 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav-ul">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-         
-        </ul>
-        <button type="button" class="btn btn-outline-secondary my-btn">Book Now!</button>
+     
       </div>
     </div>
   </nav>
   <div class="my-container clearfix">
     <div class="container-info">
-      <img src="{% static 'images/portrait.jpg' %}" width="250px" height="250px" alt="">
+      <img src="{{picture.image.url}}" width="250px" height="250px" alt="">
       <h1>Keep On Dancing</h1>
       <h4>let's get in touch!</h4>
-      <button type="button" class="my-btn btn btn-outline-secondary">Free consultation</button>
+      <button type="button" class="my-btn btn btn-outline-secondary">Music below!</button>
     </div>
   </div>
 
@@ -61,13 +43,13 @@
     <img src="{% static 'images/wedding_pic.jpg' %}" width="50%" alt="">
     <h3>Weddings & Partys!
       <br/>
-      <button type="button" class="btn btn-outline-secondary">Learn More</button>
+      <button type="button" class="btn btn-outline-secondary">Contact me below</button>
     </h3>
     </article>
   <article class="partys" >
     <h3>Proms & Dances!
       <br/>
-      <button type="button" class="btn btn-outline-secondary">Learn More</button>
+      <button type="button" class="btn btn-outline-secondary">Contact me below</button>
     </h3>
     <img src="{% static 'images/prom_pic.jpg' %}" width="50%" alt="">
   </article>
@@ -75,7 +57,7 @@
     <img src="{% static 'images/corp-event.jpg' %}" width="50%" alt="">
     <h3>Bisness events!
       <br/>
-      <button type="button" class="btn btn-outline-secondary">Learn More</button>
+      <button type="button" class="btn btn-outline-secondary">Contact me below</button>
     </h3>
   </article>
 </section>
@@ -95,6 +77,9 @@
   </ul>
   
   <div class="amazingaudioplayer-engine"><a href="http://amazingaudioplayer.com" title="jquery audio player">music player for website</a></div>
+</div>
+<div class="contact">
+  <h4>email me at: jammmingerald@gmail.com</h4>
 </div>
 
 <!-- End of body section HTML codes -->

@@ -23,4 +23,8 @@ class Music(models.Model):
   
 class My_pictures(models.Model):
       image = models.ImageField(upload_to='my_pics/')
+
+      def __str__(self):
+          return "my_pic"
+      
     
