@@ -7,7 +7,7 @@ class Music(models.Model):
     song_name = models.CharField(default=song_file.name, max_length=200)
     song_duration = models.CharField(default='0', max_length=200)
     song_artist = models.CharField(default='no artist', max_length=200)
-    song_date_added = models.DateTimeField(auto_now_add=True)
+    song_date_added = models.DateTimeField(auto_now=True)
     
     def __str__(self):
         return self.song_name

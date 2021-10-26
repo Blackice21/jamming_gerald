@@ -36,7 +36,7 @@ jQuery(document).ready(function(){
 
         showprogress:true,
 
-        random:true,
+        random:false,
 
         titleformat:"%TITLE%",
 
