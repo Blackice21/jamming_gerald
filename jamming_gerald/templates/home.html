@@ -31,7 +31,13 @@
   </nav>
   <div class="my-container clearfix">
     <div class="container-info">
-      <img src="{{picture.image.url}}" width="250px" height="250px" alt="">
+      {% if picture.count != 0 %}
+      {% for pic in picture %}
+      <img src="{{pic.image.url}}" width="250px" height="250px" alt="">
+      {% endfor %}
+      {% else %}
+      <img src="{% static 'images/portrait.jpg' %}" width="250px" height="250px" alt="">
+      {% endif %}
       <h1>Keep On Dancing</h1>
       <h4>let's get in touch!</h4>
       <button type="button" class="my-btn btn btn-outline-secondary">Music below!</button>

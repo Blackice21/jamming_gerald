@@ -4,8 +4,8 @@ import audioread
 # Create your views here.
 def home(request):
     my_songs = Music.objects.all()
-    picture = My_pictures.objects.all()[0]
     songs = my_songs.order_by('-song_date_added')
+    picture = My_pictures.objects.all()
     context = {
         'songs':songs,
         'picture':picture,
