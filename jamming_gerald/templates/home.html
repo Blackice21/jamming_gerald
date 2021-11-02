@@ -78,7 +78,7 @@
       
       {% for song in songs.all %}
       <li data-artist="{{song.song_artist}}" data-title="{{song.song_name}}" data-album="Uppbeat" data-info=""   data-image="{% static 'audios/tenor.gif' %}" data-duration="{{song.get_audio}}">
-        <div class="amazingaudioplayer-source" data-src="{{song.url}}" data-type="audio/mpeg" ></div>
+        <div class="amazingaudioplayer-source" data-src="{{song.path}}" data-type="audio/mpeg" ></div>
     </li>
     {% endfor %}
   </ul>
